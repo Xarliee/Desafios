@@ -1,0 +1,85 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script type="text/javascript">
+var alumnos = [
+{ Nombre : 'Belén Guede Vicencio', Edad:18,  Genero: 'Femenino'},
+{ Nombre : 'Benjamín Silva López', Edad:35, Genero: 'Masculino'},
+{ Nombre : 'Carlos Patricio Salas Marín', Edad: 27, Genero: 'Masculino'},
+{ Nombre :'Cristóbal Domínguez Henriquez', Edad: 35,Genero: 'Masculino'},
+{ Nombre :'Daniela Alejandra Mora', Edad: 28, Genero: 'Femenino'},
+{ Nombre :'Diego Guajardo', Edad:30, Genero: 'Masculino'},
+{ Nombre :'Francisca Medina', Edad:21, Genero: 'Femenino'},
+{ Nombre :'Gonzalo Patricio Alarcón Iturra', Edad: 28, Genero: 'Masculino'},
+{ Nombre :'Joaquin Sepúlveda', Edad: 24, Genero: 'Masculino'},
+{ Nombre :'Manuel Alejandro Saez Palominos', Edad: 29, Genero: 'Masculino'},
+{ Nombre :'María Alejandra Quintana Ramirez', Edad: 28, Genero: 'Femenino'},
+{ Nombre :'Nathalie Ravilet', Edad: 28, Genero: 'Femenino'},
+{ Nombre :'Rodrigo Ignacio Hein Yanez', Edad: 29, Genero: 'Masculino'},
+{ Nombre :'Sebastián Meza Estrada', Edad: 25, Genero: 'Masculino'},
+{ Nombre :'David Barrientos', Edad: 32, Genero: 'Masculino'},
+{ Nombre :'Juan Cristobal Pazos', Edad: 35, Genero: 'Masculino'}
+];
+// > undefined
+
+
+var hombres=alumnos.filter(function(cabros){
+return cabros.Genero == "Masculino";
+})
+.map(function(cabros){ return cabros.Nombre;
+ });
+
+ alert("Los nombres de los hombres son los siguientes: "+hombres);
+
+
+var mujeres=alumnos.filter(function(cabras){
+return cabras.Genero == "Femenino";
+})
+.map(function(cabras){ return cabras.Nombre;
+ });
+
+ alert("Los nombres de las mujeres son los siguientes:" +mujeres);
+
+
+var Edadmujeres = alumnos.filter(function(cabras){
+    return cabras.Genero == "Femenino";
+	})
+
+.map(function(cabras){
+return cabras.Edad;
+ })
+ 
+.reduce(function(anterior,actual){
+return anterior+actual;
+},0);
+
+alert("La Suma de las edades de las mujeres es = " +Edadmujeres);
+
+
+var Edadhombres = alumnos.filter(function(cabros){
+    return cabros.Genero == "Masculino";
+    })
+
+.map(function(cabros){
+return cabros.Edad;
+ })
+ 
+.reduce(function(anterior,actual){
+return anterior+actual;
+},0);
+
+alert("La Suma de las edades de las mujeres es= " +Edadhombres);
+
+alert("La Suma de las edades de todos es= "+(Edadhombres+Edadmujeres));
+
+
+</script>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+</body>
+</html>
